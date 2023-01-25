@@ -53,5 +53,5 @@ function draw() {  // Execute calculations and drawings until program is stopped
        		y0 = y1  // Set previous y coordinate to current y coordinate
 
         	t += t_inc  // Increment t by t_inc
-  }
+	}
 }
