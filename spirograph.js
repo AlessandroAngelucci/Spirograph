@@ -13,6 +13,10 @@ var y1  // Current y coordinate
 var x0  // Previous x coordinate
 var y0  // Previous y coordinate
 
+var red  // Red colour channel
+var green  // Green colour channel
+var blue  // Blue colour channel
+
 function setup() {  // Set up canvas and initialise variables
 	createCanvas(650, 650);  // Define canvas size
     	angleMode(DEGREES)  // Set angle mode to degrees
@@ -44,9 +48,9 @@ function draw() {  // Execute calculations and drawings until program is stopped
         	x1 = ((r_o - r_i)*cos(t)) + (rho*cos(((r_o - r_i)/r_i)*t))  // Calculate current x coordinnate
         	y1 = ((r_o - r_i)*sin(t)) - (rho*sin(((r_o - r_i)/r_i)*t))  // Calculate current y coordinate
     
-        	var red = map(cos(frameCount), -1, 1, 100, 200)  // Store red colour channel
-        	var green = map(sin(frameCount), -1, 1, 100, 200)  // Store green colour channel
-        	var blue = map(cos(frameCount) + sin(frameCount), -1.5, 1.5, 100, 200)  // Store blue colour channel
+        	red = map(cos(frameCount), -1, 1, 100, 200)  // Store red colour channel
+        	green = map(sin(frameCount), -1, 1, 100, 200)  // Store green colour channel
+        	blue = map(cos(frameCount) + sin(frameCount), -1.5, 1.5, 100, 200)  // Store blue colour channel
 
         	stroke(red, green, blue)  // Set line stroke colour
         	line(x0, y0, x1, y1)  // Draw line from previous x & y to current x & y
