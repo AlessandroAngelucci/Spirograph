@@ -4,7 +4,7 @@
 var r_o  // Outer circle radius
 var r_i  // Inner circle radius
 var rho  // Distance between inner circle "penhole" point and center of inner circle
-var t  // Counter clockwise angle by which the tangent point of the inner and outer circles rotates on the outer circle
+var t  // Counterclockwise angle by which the tangent point of the inner and outer circles rotates on the outer circle
 var t_inc  // Increment rate of t
 var speed  // Number of loops per frame
 
